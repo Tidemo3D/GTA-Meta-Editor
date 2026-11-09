@@ -2,7 +2,7 @@
 
 A VS Code extension for editing GTA V / FiveM vehicle metas without hand-writing XML. Sirens, mod kits, spawn colours and vehicles.meta fields each get a visual editor beside the text. The `.meta` file stays the source of truth: every change is written straight into the text, keeps your indentation and comments, and can be undone with Ctrl+Z.
 
-<!-- screenshot: docs/images/overview.png — the panel open beside a carcols.meta -->
+![Siren settings: sequencer grid and preview](docs/images/siren-editor.png)
 
 It opens a panel for:
 
@@ -43,8 +43,6 @@ Any `.meta` file is also checked for formatting mistakes, such as the stray "s" 
 ---
 
 ## How the panel works
-
-<!-- screenshot: docs/images/siren-editor.png — Sirens tab with grid and preview -->
 
 | You do | What happens in the file |
 |---|---|
@@ -101,7 +99,9 @@ To update, install the new `.vsix` the same way; it replaces the old version.
 
 ### Siren settings
 
-<!-- screenshot: docs/images/siren-preview.png — preview "On the car" with lights placed -->
+| Default positions | Lights placed on the car |
+|---|---|
+| ![Preview with the lights in their default spots](docs/images/siren-preview-default.png) | ![Preview with the lights dragged into place](docs/images/siren-preview.png) |
 
 - **Labels.** Every siren gets a `<!-- SIREN 1 -->` comment above it so you can find it in the file. Rename it in the siren's **Label** field (e.g. `FRONT LEFT RED`).
 - **Grid.** Click or drag to paint flash and rotation steps. Ctrl-click rows to edit several sirens at once.
@@ -115,7 +115,7 @@ To update, install the new `.vsix` the same way; it replaces the old version.
 
 ### Mod kits
 
-<!-- screenshot: docs/images/modkit.png — Mod kits tab with categories, stats and shop names -->
+![Mod kits: stats, categories, shop names and parts](docs/images/modkit.png)
 
 1. **Link vehicle_names.lua.** It's found automatically when the resource has one; otherwise click **Choose file…**.
 2. **Add a part.** Pick a category, then click **+ Add part** (or **+ Part** on a category header). The part gets the category's usual bone and lands at the end of its category.
@@ -138,8 +138,6 @@ When you paste parts in from another kit and a category ends up in two places, n
 
 ### Bulk edit (every kit in the file)
 
-<!-- screenshot: docs/images/bulk-edit.png — Bulk edit view of liveries across kits -->
-
 1. Click **Bulk edit · all N kits** at the top of the Mod kits tab.
 2. Pick a category (liveries by default). Each part is listed once, matched across kits by its name without the vehicle prefix:
 
@@ -157,15 +155,15 @@ Each bulk change is one edit, so one Ctrl+Z undoes it in every kit.
 
 ### Variations (carvariations.meta)
 
-<!-- screenshot: docs/images/variations.png — Variations tab with colour sets and palette -->
+![Variations: spawn colour sets](docs/images/variations.png)
+
+<p align="center"><img src="docs/images/palette.png" alt="The colour palette" width="420"></p>
 
 - **Spawn colours.** Each colour set has six slots: primary, secondary, pearlescent, wheels, interior and dashboard. Each slot shows the game colour name, and a small car preview is shown too. Click a slot to open the palette. You can search it by name or index, and it's grouped Metallic / Matte / Metals / Util / Worn. A pick can also be applied to every set.
 - **Sets.** You can add, duplicate, reorder and delete sets, and edit each set's livery flags.
 - **Other fields.** Kits (suggested from the resource's carcols files), the siren setting (shown with its name), light settings and plate probabilities.
 
 ### Vehicles (vehicles.meta)
-
-<!-- screenshot: docs/images/vehicles.png — Vehicles tab with grouped fields -->
 
 - **Fields.** Every field of the selected vehicle is grouped into Identity, Spawning & traffic, Flags & extras, Body/wheels/damage, LODs & textures, Cameras, First person & drive-by, Effects & misc, and Other.
 - **Editors.** true/false fields are checkboxes, offsets get x/y/z boxes and flags are chips. requiredExtras has EXTRA_1–14 checkboxes, and there's one box per LOD distance. Common fields suggest the usual values.
@@ -182,7 +180,7 @@ Each edit changes only that one field. Tabs, line endings and fields the editor 
 
 ### Checks and change markers
 
-<!-- screenshot: docs/images/checks.png — warnings in the panel and Problems panel -->
+![A new part flagged for a missing shop label](docs/images/checks.png)
 
 | Check | Where it shows |
 |---|---|

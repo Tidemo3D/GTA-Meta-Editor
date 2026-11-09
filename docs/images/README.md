@@ -1,1 +1,1 @@
-Screenshots used by the main README go here.
+Screenshots used by the main README.
